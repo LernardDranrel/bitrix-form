@@ -1,0 +1,146 @@
+body {
+    background-color: gray;
+}
+
+
+.lernard-window-fixed {
+    left:0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+.lernard-form {
+    background-color: white;
+    position: fixed;
+    border-radius: 20px;
+    display: flex;
+   
+    
+}
+.lernard-form .lernard-form-close-button{
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top:-10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    
+
+
+}
+.lernard-form .lernard-form-close-button img {
+    position: relative;
+    
+    width: 100%;
+    height: auto;
+}
+
+.lernard-form .lernard-form-body{
+    padding: 5%;
+    width: 100%;
+    
+}
+.lernard-form .lernard-form-body > form div{
+    font: message-box;
+    margin-bottom: 1vh;
+}
+
+.lernard-form .lernard-form-body .lernard-form-title {
+    font: message-box;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.lernard-form .lernard-form-body .lernard-form-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lernard-form .lernard-form-body .lernard-form-sumbit {
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+}
+.lernard-form .lernard-form-body .lernard-form-personal-data {
+    display: inline;
+    font:message-box;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+/* обработку персональных данных */
+.lernard-form .lernard-form-body .lernard-form-personal-data::after {
+    
+    font-weight: 800;
+}
+
+
+.string-textfield {
+    height: 50px;
+    margin-bottom: 1vh;
+    padding-left: 10px;
+}
+
+.large-textfield {
+    height: 100px;
+    resize: none;
+    padding: 10px;
+
+    
+}
+
+.smooth-textfield {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(238, 238, 238);
+}
+.smooth-textfield::placeholder {
+    color:black;
+    opacity: 0.9;
+    font: message-box;
+    
+}
+
+@media screen and (min-width: 700px) {
+
+    .lernard-form .lernard-form-body .lernard-form-inputs input{
+        flex-basis: 47%;
+    }
+    .lernard-form {
+        width: 700px;
+    }
+    
+}
+
+
+@media screen and (min-width: 450px) and (max-width: 699px){
+
+    .lernard-form .lernard-form-body .lernard-form-inputs input{
+        flex-basis: 100%;
+    }
+    .lernard-form {
+        width: 450px;
+    }
+}
+
+
+@media screen and (max-width: 449px){
+    .lernard-form .lernard-form-body .lernard-form-inputs input{
+        flex-basis: 100%;
+    }
+    .lernard-form {
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
